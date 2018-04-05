@@ -10,7 +10,25 @@
   <body>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/lightbox/js/lightbox.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+    function imageSearch() {
+      const userSearch = document.getElementById('search');
+      const searchValue = userSearch.value.toLowerCase();
+      const photoGallery = document.getElementById('lightbox-gallery');
+      const photo = photoGallery.getElementsByTagName('a');
+      var p;
+      var parent;
+      for (let i = 0; i < photo.length; i +=1) {
+         p = photo[i];
+         parent = p.parentElement;
+        if(p.getAttribute('data-title').toLowerCase().indexOf(searchValue) > -1) {
+          parent.style.display = "";
+        } else {
+          parent.style.display = "none";
+        }
+      }
+    }
+    </script>
     <header>
       <input id="search" onkeyup="imageSearch()" type="text" name="search-bar" placeholder="Search...">
     </header>
