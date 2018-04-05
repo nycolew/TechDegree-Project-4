@@ -52,8 +52,9 @@ MEDIA QUERIES
     justify-content: space-between;
     flex-grow: 1;
     flex-wrap: wrap;
-    margin: 5%;
+    margin: 5% auto;
     padding: 2% 0;
+    max-width: 80%;
   }
 
   .image {

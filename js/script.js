@@ -3,7 +3,7 @@ function imageSearch() {
   const search = userSearch.value.toLowerCase();
   const photoGallery = document.getELementById('lightbox-gallery');
   const photo = photoGallery.children();
-  const p;
+  let p;
 
   for (let i = 0; i < photo.length; i +=1) {
     p = photo[i];
